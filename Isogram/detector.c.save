@@ -1,0 +1,130 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <errno.h>
+#include <stdbool.h>
+
+/*Initializes all elements in the array to a*/
+void initialize(char *cArr, int iLen)
+{
+	for(int i=0;i<iLen;i++)
+	{
+		cArr[i]='a';
+	}
+
+}
+void printelements(char *cArr, int iLen)
+{
+	for(int i=0;i<iLen;i++)
+	{
+		printf("%c\n",cArr[i]);
+	}
+
+}
+
+int CountChar(char *cArr, int iLen, char searchKey)
+{
+		int iCount=0;
+		for(int i=0;i<iLen;i++)
+		{
+			if(cArr[i]==searchKey)
+			{
+				//printf("cArr[i] %c\n",cArr[i]);
+				iCount++;
+			}
+		}
+		return iCount;
+}
+
+void sort(char *cArr, int iLen)
+{
+	for(int i=0;i<iLen;i++)
+	{
+		
+
+	}
+}
+
+int main(int argc, char *argv[])
+{
+	const int iSigChars=5;
+	char *sTest=(char *)malloc(iSigChars*sizeof(char));
+	initialize(sTest,iSigChars);
+	//printelements(sTest,iSigChars);
+	
+
+	if(sTest == NULL)
+	{
+		printf("Failed to allocate memory:");
+		exit(EXIT_FAILURE);
+	}
+	//scanf("%c\n",&sTest[0]);
+	//for(int i=0;i<iSigChars;i++)
+	//{
+		//printf("Enter a character\n");
+		//fscanf(stdin,"%c\n",sTest[i]);
+		/*if(i<iSigChars)
+		{
+			scanf("%c\n",&sTest[i]);
+			fflush(stdin);
+		}*/
+		//scanf("%c\n",&sTest[i]);
+		//printf("%d\n",i);
+		//scanf("%c\n",&sTest[i]);
+		//fflush(stdin);
+	//}
+	int i=0;
+	//while(i<iSigChars)
+	//{	//i++;
+		//scanf("%c\n",&sTest[i]);
+		//i++;
+		//i++;
+	//}
+	bool bTerm=false;
+	do{
+		if(i==iSigChars-1)
+		{
+			//bTerm=true;
+			printf("This input will not be in the input string\n");
+			//break;
+		}
+		scanf("%c\n",&sTest[i]);
+		i++;
+	}while(i<iSigChars);
+
+	
+	
+	printf("Elements are: \n");
+	printelements(sTest,iSigChars);
+	
+	printf("In the for loop \n");
+	int iCount=0;
+	//iCount=CountChar(sTest,iSigChars,'a');
+	/*for(int j=0;j<iSigChars;j++)
+	{
+
+		for(int k=0;k<iSigChars;k++)
+		{
+			iCount=CountChar(sTest,iSigChars,sTest[j]);
+		}
+	}*/
+
+	/*for(int i=0;i<iSigChars;i++)
+	{
+		for(int j=0;j<i;j++)
+		{
+			if(sTest[i]==sTest[j])
+			{
+				//printf("%c\n",sTest[
+				iCount++;
+				//iCount=0;
+			}
+			printf("Value of iCount %d, %c\n",iCount,sTest[i]);
+			iCount=0;
+		}
+	}*/
+	for(int i=0;i<iSigChars;i++)
+	{
+	}
+	printf("Value of iCount is: %d\n",iCount);
+}
